@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Report = require('../models/reports')
+const Report = require('../models/report')
 
 
 router.get('/', async (req, res) => {
@@ -25,6 +25,7 @@ router.get('/:id', async (req, res) => {
 // Insert New Report
 router.post('/', async (req, res) => {
   const inReport = new Report({
+    idUser:  req.body.idUser,
     idCanDo: req.body.idCanDo,
     answers: req.body.answers
   })

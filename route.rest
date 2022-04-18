@@ -165,3 +165,42 @@ DELETE http://localhost:4000/reports/62504626abf84cbe1ec91583
 ###
 
 DELETE http://localhost:4000/reports/ByCanDo/624e10f9cc50bdb65ac2b648
+
+
+###
+
+
+
+GET http://localhost:4000/users/
+###
+
+GET http://localhost:4000/users/625a048fc8bd070e30175381
+###
+
+GET http://localhost:4000/users/ByLoginId/9r4ujTKnq0QzcPaC9PS2MJEIsh92
+###
+
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+  "nickname": "dummy",
+  "nivelCEFR": "A1",
+  "nivelJLPT": "N5",
+  "nivelShirai": "DAI1",
+  "role": "basic",
+  "loginId": "9r4ujTKnq0QzcPaC9PS2MJEIsh92"
+}
+###
+PUT http://localhost:4000/users/ByLoginId/9r4ujTKnq0QzcPaC9PS2MJEIsh92
+Content-Type: application/json
+
+{
+  "nickname": "tsukimi",
+  "nivelCEFR": "B1",
+  "nivelJLPT": "N3",
+  "nivelShirai": "DAI10"
+}
+###
+
+DELETE http://localhost:4000/users/625b45d5adcf5f53f2efdd42

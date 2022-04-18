@@ -9,9 +9,10 @@ const methodOverride = require('method-override')
 const cors = require('cors')
 
 const indexRouter = require('./routes/index')
+const candoRouter = require('./routes/candos')
 const exerciseRouter = require('./routes/exercises')
 const reportRouter = require('./routes/reports')
-const candoRouter = require('./routes/cando')
+const userRouter = require('./routes/users')
 
 //CONFIGURACOES
 app.use(methodOverride('_method'))
@@ -38,6 +39,7 @@ app.use('/', indexRouter)
 app.use('/candos', candoRouter)
 app.use('/exercises', exerciseRouter)
 app.use('/reports', reportRouter)
+app.use('/users', userRouter)
 
 app.listen(process.env.PORT || 4000)
 

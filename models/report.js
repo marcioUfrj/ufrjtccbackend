@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 
 const reportSchema = new mongoose.Schema(
   {
+    idUser: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'User'
+    },
     idCanDo: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
