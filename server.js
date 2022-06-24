@@ -22,7 +22,7 @@ app.use(express.json()) // API : post
 
 app.use(
   cors({
-    origin: "https://tccmarciofrontend.herokuapp.com/*",
+    origin: "https://tccmarciofrontend.herokuapp.com",
   })
 )
 
