@@ -23,6 +23,7 @@ app.use(express.json()) // API : post
 app.use(
   cors({
     origin: "https://tccmarciofrontend.herokuapp.com",
+    origin: "http://localhost:3000/"
   })
 )
 
