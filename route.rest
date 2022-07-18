@@ -131,6 +131,12 @@ GET http://localhost:4000/reports/
 GET http://localhost:4000/reports/625046b7efb16e2ea84e4c2b
 ###
 
+GET http://localhost:4000/reports/ByCanDo/62b9d7638c02c34b14723199
+###
+
+GET http://localhost:4000/reports/ByUser/625046b7efb16e2ea84e4c2b
+###
+
 POST http://localhost:4000/reports/
 Content-Type: application/json
 

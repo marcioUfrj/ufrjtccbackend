@@ -22,6 +22,26 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+// Get Report By Can Do ID
+router.get('/ByCanDo/:id', async (req, res) => {
+  try {
+    const report = await Report.find({ idCanDo: req.params.id }) // retorna array com Report
+    res.json(report)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get Report By User ID
+router.get('/ByUser/:id', async (req, res) => {
+  try {
+    const report = await Report.find({ idUser: req.params.id }) // retorna array com Report
+    res.json(report)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
 // Insert New Report
 router.post('/', async (req, res) => {
   const inReport = new Report({
@@ -66,7 +86,7 @@ router.delete('/:id', async (req, res) => {
   }
 })
 
-// Delete Report
+// Delete Report By Can Do {id}
 router.delete('/ByCanDo/:id', async (req, res) => {
   let inReport
   try {
