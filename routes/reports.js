@@ -26,8 +26,8 @@ router.get('/:id', async (req, res) => {
 router.get('/ByCanDo/:id', async (req, res) => {
   try {
     const report = await Report.find(
-                          { idCanDo: req.params.id },
-                          { _id: 1, idCanDo: 0, idUser: 0, 'answers.idAnswerSelected': 1, 'answers.idQuestion': 1 } //, 'answers.idExercise': 0, 'answers.initialTime': 0, 'answers.finalTime': 0}
+                          { idCanDo: req.params.id }
+                          //{ _id: 1, idCanDo: 0, idUser: 0 } //, 'answers.idAnswerSelected': 1, 'answers.idQuestion': 1 } //, 'answers.idExercise': 0, 'answers.initialTime': 0, 'answers.finalTime': 0}
                         ) // retorna array com Report
     res.json(report)
   } catch (err) {
