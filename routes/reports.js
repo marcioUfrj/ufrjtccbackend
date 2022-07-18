@@ -25,7 +25,10 @@ router.get('/:id', async (req, res) => {
 // Get Report By Can Do ID
 router.get('/ByCanDo/:id', async (req, res) => {
   try {
-    const report = await Report.find({ idCanDo: req.params.id }) // retorna array com Report
+    const report = await Report.find(
+                          { idCanDo: req.params.id },
+                          { _id: 1, idCanDo: 1, idUser: 1, 'answers.idAnswerSelected': 1, 'answers.idQuestion': 1}
+                        ) // retorna array com Report
     res.json(report)
   } catch (err) {
     res.status(500).json({ message: err.message })
