@@ -29,6 +29,10 @@ const reportSchema = new mongoose.Schema(
           required: true,
           ref: 'Exercise'
         },
+        score: {
+          type: Number,
+          required: true
+        },
         initialTime: {
           type: String,
           required: true
