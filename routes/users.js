@@ -102,6 +102,7 @@ router.put('/:id', async (req, res) => {
     inUser.nivelShirai = req.body.nivelShirai
     inUser.role = inUser.role
     inUser.loginId = inUser.loginId
+    inUser.modelId = req.body.modelId
     inUser.createdDate = inUser.createdDate
     const updatedUser = await inUser.save()
     res.json(updatedUser)
@@ -121,9 +122,10 @@ router.put('/ByLoginId/:idLogin', async (req, res) => {
     inUser[0].nivelJLPT = req.body.nivelJLPT
     inUser[0].nivelShirai = req.body.nivelShirai
     inUser[0].role = inUser[0].role
-    console.log(inUser)
     inUser[0].loginId = inUser[0].loginId
+    inUser[0].modelId = parseInt(req.body.modelId)
     inUser[0].createdDate = inUser[0].createdDate
+    console.log(inUser)
     const updatedUser = await inUser[0].save()
     res.json(updatedUser)
   } catch (err) {

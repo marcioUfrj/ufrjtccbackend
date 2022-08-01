@@ -25,6 +25,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  modelId: {
+    type: Number,
+    required: true
+  },
   createdDate: {
     type: Date,
     required: true,
