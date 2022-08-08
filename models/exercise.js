@@ -15,13 +15,18 @@ const exerciseSchema = new mongoose.Schema({
   },
   questions: [
     {
+      idQuestion: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Question'
+      },
       question: {
         type: String,
         required: true
       },
       answers: [
         {
-          text: { type: String, required: true }, 
+          text: { type: String, required: true },
           correct: { type: Boolean, required: true } 
         }
       ]

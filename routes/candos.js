@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const CanDo = require('../models/cando')
-const Exercise = require('../models/exercise')
 
 //Pagina inicial
 router.get('/', async (req, res) => {

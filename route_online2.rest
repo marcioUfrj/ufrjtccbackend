@@ -1,0 +1,32 @@
+GET https://tccmarcioconceito.herokuapp.com/users/
+###
+
+GET https://tccmarcioconceito.herokuapp.com/users/ByLoginId/1
+###
+
+POST https://tccmarcioconceito.herokuapp.com/users/
+Content-Type: application/json
+
+{
+  "nickname": " ",
+  "nivelCEFR": " ",
+  "nivelJLPT": " ",
+  "nivelShirai": " ",
+  "role": "basic",
+  "loginId": "1"
+}
+###
+
+PUT https://tccmarcioconceito.herokuapp.com/users/ByLoginId/Q7VMovcYTZRPrHfU9csHmHnCzo62
+Content-Type: application/json
+
+{
+    "nickname": "Marcius3",
+    "nivelCEFR": "A1",
+    "nivelJLPT": "N5",
+    "nivelShirai": "DAI4",
+    "modelId": 6
+}
+###
+
+DELETE https://tccmarcioconceito.herokuapp.com/users/61900753962d61bd83d82688
