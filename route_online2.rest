@@ -13,7 +13,7 @@ PUT https://tccmarcioconceito.herokuapp.com/answers/62f188336e77215e6fbd358a
 Content-Type: application/json
 
 {
-    "text": "update"
+    "text": "primeiro texto"
 }
 ###
 

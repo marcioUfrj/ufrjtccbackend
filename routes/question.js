@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const questions = await Question.find()
                               .populate({ path: "answers", 
-                                          populate: { path: "idAnswer" }})
+                                          populate: { path: "idAnswer", select: "text" }})
     res.json(questions)
   } catch (err) {
     res.status(500).json({ message: err.message })
