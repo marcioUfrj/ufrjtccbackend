@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 })
 
 //Pagina inicial
-router.get('/getAllPopulated', async (req, res) => {
+router.get('/getPopulated', async (req, res) => {
   try {
     const questions = await Question.find()
                               .populate({ 
