@@ -28,8 +28,12 @@ DELETE https://tccmarcioconceito.herokuapp.com/answers/62f188336e77215e6fbd358a
 
 GET https://tccmarcioconceito.herokuapp.com/questions/
 ###
+GET https://tccmarcioconceito.herokuapp.com/questions/getPopulated/
+###
 
 GET https://tccmarcioconceito.herokuapp.com/questions/62f18f075c280d01a85e327b
+###
+GET https://tccmarcioconceito.herokuapp.com/questions/getPopulated/62f18f075c280d01a85e327b
 ###
 
 POST https://tccmarcioconceito.herokuapp.com/questions/

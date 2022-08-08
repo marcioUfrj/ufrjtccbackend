@@ -27,7 +27,7 @@ router.get('/:id', async (req, res) => {
 
 
 //Pagina inicial
-router.get('/getPopulated', async (req, res) => {
+router.get('/getAllPopulated', async (req, res) => {
   try {
     const questions = await Question.find()
                               .populate({ 
