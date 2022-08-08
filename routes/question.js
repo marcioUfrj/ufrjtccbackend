@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const in_question = await Question.findById(req.params.id)
-    if (in_question === {}){
+    if (in_question === null){
       throw { message: 'Objeto nao encontrado!' }
     }
     res.json(in_question)
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res) => {
   let in_question = null
   try {
     in_question = await Question.findById(req.params.id)
-    if (in_question === {}){
+    if (in_question === null){
       throw { message: 'Objeto nao encontrado!' }
     }
     //console.log('in_question: ' + in_question)
