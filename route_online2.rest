@@ -5,7 +5,7 @@ POST https://tccmarcioconceito.herokuapp.com/answers/
 Content-Type: application/json
 
 {
-  "text": "primeiro texto"
+  "text": "segundo texto"
 }
 ###
 
@@ -29,6 +29,9 @@ DELETE https://tccmarcioconceito.herokuapp.com/answers/62f188336e77215e6fbd358a
 GET https://tccmarcioconceito.herokuapp.com/questions/
 ###
 
+GET https://tccmarcioconceito.herokuapp.com/questions/62f18b3a70f1da8e47535e42
+###
+
 POST https://tccmarcioconceito.herokuapp.com/questions/
 Content-Type: application/json
 
@@ -38,12 +41,16 @@ Content-Type: application/json
       {
         "idAnswer": "62f188336e77215e6fbd358a",
         "correct": true
+      },
+      {
+        "idAnswer": "62f18b1770f1da8e47535e3f",
+        "correct": true
       }
     ]
 }
 ###
 
-PUT https://tccmarcioconceito.herokuapp.com/questions/62f188336e77215e6fbd358a
+PUT https://tccmarcioconceito.herokuapp.com/questions/62f18b3a70f1da8e47535e42
 Content-Type: application/json
 
 {
@@ -52,9 +59,13 @@ Content-Type: application/json
       {
         "idAnswer": "62f188336e77215e6fbd358a",
         "correct": false
+      },
+      {
+        "idAnswer": "62f18b1770f1da8e47535e3f",
+        "correct": false
       }
     ]
 }
 ###
 
-DELETE https://tccmarcioconceito.herokuapp.com/questions/62f188336e77215e6fbd358a
+DELETE https://tccmarcioconceito.herokuapp.com/questions/62f18b3a70f1da8e47535e41

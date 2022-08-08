@@ -16,6 +16,9 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const in_question = await Question.findById(req.params.id)
+    if (in_question === {}){
+      throw { message: 'Objeto nao encontrado!' }
+    }
     res.json(in_question)
   } catch (err) {
     res.status(500).json({ message: err.message })
@@ -39,9 +42,12 @@ router.post('/', async (req, res) => {
 
 // Update Question
 router.put('/:id', async (req, res) => {
-  let in_question
+  let in_question = null
   try {
     in_question = await Question.findById(req.params.id)
+    if (in_question === {}){
+      throw { message: 'Objeto nao encontrado!' }
+    }
     //console.log('in_question: ' + in_question)
     in_question.question = req.body.question
     in_question.answers = req.body.answers
