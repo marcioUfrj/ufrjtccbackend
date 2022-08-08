@@ -29,7 +29,7 @@ DELETE https://tccmarcioconceito.herokuapp.com/answers/62f188336e77215e6fbd358a
 GET https://tccmarcioconceito.herokuapp.com/questions/
 ###
 
-GET https://tccmarcioconceito.herokuapp.com/questions/62f18b3a70f1da8e47535e42
+GET https://tccmarcioconceito.herokuapp.com/questions/62f18f075c280d01a85e327b
 ###
 
 POST https://tccmarcioconceito.herokuapp.com/questions/
@@ -50,7 +50,7 @@ Content-Type: application/json
 }
 ###
 
-PUT https://tccmarcioconceito.herokuapp.com/questions/62f18b3a70f1da8e47535e42
+PUT https://tccmarcioconceito.herokuapp.com/questions/62f18f075c280d01a85e327b
 Content-Type: application/json
 
 {
@@ -68,4 +68,4 @@ Content-Type: application/json
 }
 ###
 
-DELETE https://tccmarcioconceito.herokuapp.com/questions/62f18b3a70f1da8e47535e41
+DELETE https://tccmarcioconceito.herokuapp.com/questions/62f18f075c280d01a85e327b

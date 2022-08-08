@@ -6,6 +6,8 @@ const Question = require('../models/question')
 router.get('/', async (req, res) => {
   try {
     const questions = await Question.find()
+                              .populate({ path: "answers", 
+                                          populate: { path: "idAnswer" }})
     res.json(questions)
   } catch (err) {
     res.status(500).json({ message: err.message })
