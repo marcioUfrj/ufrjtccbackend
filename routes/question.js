@@ -6,8 +6,6 @@ const Question = require('../models/question')
 router.get('/', async (req, res) => {
   try {
     const questions = await Question.find()
-                              .populate({ path: "answers", 
-                                          populate: { path: "idAnswer", select: "text" }})
     res.json(questions)
   } catch (err) {
     res.status(500).json({ message: err.message })
@@ -18,6 +16,38 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const in_question = await Question.findById(req.params.id)
+    if (in_question === null){
+      throw { message: 'Objeto nao encontrado!' }
+    }
+    res.json(in_question)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+
+//Pagina inicial
+router.get('/getPopulated', async (req, res) => {
+  try {
+    const questions = await Question.find()
+                              .populate({ 
+                                path: "answers", 
+                                populate: { path: "idAnswer", select: "text" }
+                              })
+    res.json(questions)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get one Question by ID
+router.get('/getPopulated/:id', async (req, res) => {
+  try {
+    const in_question = await Question.findById(req.params.id)
+                                .populate({ 
+                                  path: "answers", 
+                                  populate: { path: "idAnswer", select: "text" }
+                                })
     if (in_question === null){
       throw { message: 'Objeto nao encontrado!' }
     }
