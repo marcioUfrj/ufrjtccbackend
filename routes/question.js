@@ -12,20 +12,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-// Get one Question by ID
-router.get('/:id', async (req, res) => {
-  try {
-    const in_question = await Question.findById(req.params.id)
-    if (in_question === null){
-      throw { message: 'Objeto nao encontrado!' }
-    }
-    res.json(in_question)
-  } catch (err) {
-    res.status(500).json({ message: err.message })
-  }
-})
-
-
 //Pagina inicial
 router.get('/getAllPopulated', async (req, res) => {
   try {
@@ -56,6 +42,22 @@ router.get('/getPopulated/:id', async (req, res) => {
     res.status(500).json({ message: err.message })
   }
 })
+
+// Get one Question by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const in_question = await Question.findById(req.params.id)
+    if (in_question === null){
+      throw { message: 'Objeto nao encontrado!' }
+    }
+    res.json(in_question)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+
+
 
 // Create New Question
 router.post('/', async (req, res) => {
