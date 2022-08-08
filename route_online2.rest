@@ -1,32 +1,60 @@
-GET https://tccmarcioconceito.herokuapp.com/users/
+GET https://tccmarcioconceito.herokuapp.com/answers/
 ###
 
-GET https://tccmarcioconceito.herokuapp.com/users/ByLoginId/1
-###
-
-POST https://tccmarcioconceito.herokuapp.com/users/
+POST https://tccmarcioconceito.herokuapp.com/answers/
 Content-Type: application/json
 
 {
-  "nickname": " ",
-  "nivelCEFR": " ",
-  "nivelJLPT": " ",
-  "nivelShirai": " ",
-  "role": "basic",
-  "loginId": "1"
+  "text": "primeiro texto"
 }
 ###
 
-PUT https://tccmarcioconceito.herokuapp.com/users/ByLoginId/Q7VMovcYTZRPrHfU9csHmHnCzo62
+PUT https://tccmarcioconceito.herokuapp.com/answers/62f188336e77215e6fbd358a
 Content-Type: application/json
 
 {
-    "nickname": "Marcius3",
-    "nivelCEFR": "A1",
-    "nivelJLPT": "N5",
-    "nivelShirai": "DAI4",
-    "modelId": 6
+    "text": "update"
 }
 ###
 
-DELETE https://tccmarcioconceito.herokuapp.com/users/61900753962d61bd83d82688
+DELETE https://tccmarcioconceito.herokuapp.com/answers/62f188336e77215e6fbd358a
+###
+
+
+
+
+
+
+
+GET https://tccmarcioconceito.herokuapp.com/questions/
+###
+
+POST https://tccmarcioconceito.herokuapp.com/questions/
+Content-Type: application/json
+
+{
+    "question": "texto da questao",
+    "answers": [
+      {
+        "idAnswer": "62f188336e77215e6fbd358a",
+        "correct": true
+      }
+    ]
+}
+###
+
+PUT https://tccmarcioconceito.herokuapp.com/questions/62f188336e77215e6fbd358a
+Content-Type: application/json
+
+{
+    "question": "update da questao",
+    "answers": [
+      {
+        "idAnswer": "62f188336e77215e6fbd358a",
+        "correct": false
+      }
+    ]
+}
+###
+
+DELETE https://tccmarcioconceito.herokuapp.com/questions/62f188336e77215e6fbd358a

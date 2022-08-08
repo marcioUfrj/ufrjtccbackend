@@ -1,62 +1,65 @@
 const express = require('express')
 const router = express.Router()
-const Answer = require('../models/answer')
+const Question = require('../models/question')
 
 //Pagina inicial
 router.get('/', async (req, res) => {
   try {
-    const answers = await Answer.find()
-    res.json(answers)
+    const questions = await Question.find()
+    res.json(questions)
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
 })
 
-// Get one Answer by ID
+// Get one Question by ID
 router.get('/:id', async (req, res) => {
   try {
-    const in_answer = await Answer.findById(req.params.id)
-    res.json(in_answer)
+    const in_question = await Question.findById(req.params.id)
+    res.json(in_question)
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
 })
 
-// Create New Answer
+// Create New Question
 router.post('/', async (req, res) => {
-  const in_answer = new Answer({
-    text: req.body.text
+  const in_question = new Question({
+    question: req.body.question,
+    answers: req.body.answers
   })
   
   try {
-    const newanswer = await in_answer.save()
-    res.status(201).json(newanswer)
+    const newquestion = await in_question.save()
+    res.status(201).json(newquestion)
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
 })
 
-// Update Answer
+// Update Question
 router.put('/:id', async (req, res) => {
-  let in_answer
+  let in_question
   try {
-    in_answer = await Answer.findById(req.params.id)
-    //console.log('in_answer: ' + in_answer)
-    in_answer.text = req.body.text
-    const updatedanswer = await in_answer.save()
-    res.json(updatedanswer)
+    in_question = await Question.findById(req.params.id)
+    //console.log('in_question: ' + in_question)
+    in_question.question = req.body.question
+    in_question.answers = req.body.answers
+
+    const updatedquestion = await in_question.save()
+    res.json(updatedquestion)
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
 })
 
-// Delete Answer
+// Delete Question
 router.delete('/:id', async (req, res) => {
-  let in_answer
+  let in_question
   try {
-    in_answer = await Answer.findById(req.params.id)
-    await in_answer.remove()
-    res.json({ message: "Deleted Answer" })
+    in_question = await Question.findById(req.params.id)
+    await in_question.remove()
+    res.json({ message: "Deleted Question" })
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
