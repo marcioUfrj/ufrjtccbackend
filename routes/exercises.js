@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
   try {
     const exercises = await Exercise.find({ cando_id: req.params.idCanDo }) // retorna array com exercise
-    if (exercises === null) {
+    if (exercises === []) {
       throw { message: 'Can-do não existe para o ID enviado.'}
     }
 
