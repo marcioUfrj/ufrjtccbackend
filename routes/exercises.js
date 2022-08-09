@@ -25,7 +25,7 @@ router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
 
     const new_exercises = exercises.map(exercise => {
       exercise.index_val = exercise.index_val - 1
-      const new_exercise = await exercise.save()
+      const new_exercise = 1 //await exercise.save()
       return exercise
     })
 
