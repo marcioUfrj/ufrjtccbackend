@@ -23,11 +23,11 @@ router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
       throw { message: 'Can-do não existe para o ID enviado.'}
     }
 
-    exercises.forEach(id => {
-      let in_exercise = await Exercise.findById(id)
-      in_exercise.index_val = in_exercise.index_val - 1
+    //exercises.forEach(id => {
+      //let in_exercise = await Exercise.findById(id)
+      //in_exercise.index_val = in_exercise.index_val - 1
       //const n = await in_exercise.save()
-    })
+    //})
 
     const new_exercises = await Exercise.find({ cando_id : req.params.idCanDo })
 
