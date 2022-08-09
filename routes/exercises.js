@@ -19,7 +19,9 @@ router.get('/', async (req, res) => {
 router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
   try {
     const exercises = await Exercise.find({ cando_id: req.params.idCanDo }) // retorna array com exercise
-    if (exercises === null) throw { message: 'Can-do não existe para o ID enviado.'}
+    if (exercises === null) {
+      throw { message: 'Can-do não existe para o ID enviado.'}
+    }
 
     exercises.forEach(exercise => {
       new_questions = exercise.questions.map(q => {
