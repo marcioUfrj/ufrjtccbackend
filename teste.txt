@@ -4,3 +4,19 @@ marciust001@gmail.com         (1, 2) iniciante
 marciust002@gmail.com         (1, 2) iniciante
 marciust003@gmail.com         (1, 2) intermediario
 
+
+    exercises.forEach(exercise => {
+      new_questions = exercise.questions.map(q => {
+        new_answers = q.answers.map(answer => {
+          const in_answer = new Answer({
+            text: req.body.text
+          })
+          const newanswer = await in_answer.save()
+          return {idAnswer: newanswer._id, correct: answer.correct}
+        })
+
+        return {...q, objQuestion: { question: q.question, answers: new_answers }}
+      })
+
+      exercise.questions = new_questions
+    })
