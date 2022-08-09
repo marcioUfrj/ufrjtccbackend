@@ -22,11 +22,11 @@ router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
     if (exercises === []) {
       throw { message: 'Can-do não existe para o ID enviado.'}
     }
-    exercises.forEach(exercise => {
-      return true
+    const new_exercises = exercises.map(exercise => {
+      return {...exercise, flagTest: true}
     })
-    
-    res.json(exercises)
+
+    res.json(new_exercises)
   } catch (err) {
     console.log('erro buscando exercicios by can-do')
     res.status(500).json({ message: err.message })
