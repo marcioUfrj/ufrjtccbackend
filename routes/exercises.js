@@ -23,7 +23,7 @@ router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
       throw { message: 'Can-do não existe para o ID enviado.'}
     }
     const new_exercises = exercises.map(exercise => {
-      return {...exercise, flagTest: true}
+      return {_id: exercise._id, flagTest: true, name: exercise.name}
     })
 
     res.json(new_exercises)

@@ -6,8 +6,8 @@ marciust003@gmail.com         (1, 2) intermediario
 
 
     exercises.forEach(exercise => {
-      new_questions = exercise.questions.map(q => {
-        new_answers = q.answers.map(answer => {
+      const new_questions = exercise.questions.map(q => {
+        const new_answers = q.answers.map(answer => {
           const in_answer = new Answer({
             text: req.body.text
           })
