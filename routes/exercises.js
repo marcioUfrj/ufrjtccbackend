@@ -18,16 +18,18 @@ router.get('/', async (req, res) => {
 // Create Question and Answer DataBase by Can-Do
 router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
   try {
-    const exercises = await Exercise.find({ cando_id: req.params.idCanDo }) // retorna array com exercise
+    const exercises = await Exercise.find({ cando_id : req.params.idCanDo }, { _id : 1 }) // retorna array com exercise
     if (exercises === []) {
       throw { message: 'Can-do não existe para o ID enviado.'}
     }
 
-    const new_exercises = exercises.map(exercise => {
-      exercise.index_val = exercise.index_val - 1
-      const new_exercise = 1 // await exercise.save()
-      return exercise
+    exercises.forEach(id => {
+      let in_exercise = await Exercise.findById(id)
+      in_exercise.index_val = in_exercise.index_val - 1
+      await in_exercise.save()
     })
+
+    const new_exercises = await Exercise.find({ cando_id : req.params.idCanDo })
 
     res.json(new_exercises)
   } catch (err) {
