@@ -13,6 +13,17 @@ router.get('/', async (req, res) => {
   }
 })
 
+// Create Question and Answer DataBase by Can-Do
+router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
+  try {
+    const exercises = await Exercise.find({ cando_id: req.params.idCanDo }) // retorna array com exercise
+    res.json(exercises)
+  } catch (err) {
+    console.log('erro buscando exercicios by can-do')
+    res.status(500).json({ message: err.message })
+  }
+})
+
 // Get all Exercises by single Can-Do
 router.get('/ByCanDo/:idCanDo', async (req, res) => {
   try {
