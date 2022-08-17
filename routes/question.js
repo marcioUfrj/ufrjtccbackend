@@ -93,6 +93,22 @@ router.put('/:id', async (req, res) => {
   }
 })
 
+// Delete All Question By Can-do
+router.delete('/all', async (req, res) => {
+  let in_questions
+  try {
+    in_questions = await Question.find()
+    await Promise.all(
+      in_questions.map(async(in_q) => {
+        await in_q.remove()
+      })
+    )
+    res.json({ message: "Deleted Question" })
+  } catch (err) {
+    res.status(400).json({ message: err.message })
+  }
+})
+
 // Delete Question
 router.delete('/:id', async (req, res) => {
   let in_question
@@ -104,5 +120,6 @@ router.delete('/:id', async (req, res) => {
     res.status(400).json({ message: err.message })
   }
 })
+
 
 module.exports = router

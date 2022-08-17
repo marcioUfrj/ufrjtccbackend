@@ -51,6 +51,21 @@ router.put('/:id', async (req, res) => {
 })
 
 // Delete Answer
+router.delete('/all', async (req, res) => {
+  let in_answers
+  try {
+    in_answers = await Answer.find()
+    await Promise.all(
+      in_answers.map(async(in_a) => {
+        await in_a.remove()
+      })
+    )
+    res.json({ message: "Deleted Answer" })
+  } catch (err) {
+    res.status(400).json({ message: err.message })
+  }
+})
+// Delete Answer
 router.delete('/:id', async (req, res) => {
   let in_answer
   try {

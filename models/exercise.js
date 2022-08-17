@@ -17,17 +17,34 @@ const exerciseSchema = new mongoose.Schema({
     {
       idQuestion: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
+        required: false,
         ref: 'Question'
       },
       question: {
         type: String,
-        required: true
+        required: false
+      },
+      skill_model_a:  { 
+        type: Number,
+        required: false
+      },
+      skill_model_b:  { 
+        type: Number,
+        required: false
+      },
+      skill_model_c:  { 
+        type: Number,
+        required: false
       },
       answers: [
         {
-          text: { type: String, required: true },
-          correct: { type: Boolean, required: true } 
+          idAnswer: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: false,
+            ref: 'Answer'
+          },
+          text: { type: String, required: false },
+          correct: { type: Boolean, required: false } 
         }
       ]
     }

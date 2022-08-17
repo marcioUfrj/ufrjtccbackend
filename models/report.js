@@ -17,12 +17,12 @@ const reportSchema = new mongoose.Schema(
         idAnswerSelected: {
           type: mongoose.Schema.Types.ObjectId,
           required: true,
-          ref: 'Exercise'
+          ref: 'Answer'
         },
         idQuestion: {
           type: mongoose.Schema.Types.ObjectId,
           required: true,
-          ref: 'Exercise'
+          ref: 'Question'
         },
         idExercise: {
           type: mongoose.Schema.Types.ObjectId,
