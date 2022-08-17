@@ -12,16 +12,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-// Get one Report
-router.get('/:id', async (req, res) => {
-  try {
-    const report = await Report.find({ _id: req.params.id }) // retorna array com Report
-    res.json(report)
-  } catch (err) {
-    res.status(500).json({ message: err.message })
-  }
-})
-
 // Get Report By Can Do ID
 router.get('/ByCanDo/:id', async (req, res) => {
   try {
@@ -36,9 +26,35 @@ router.get('/ByCanDo/:id', async (req, res) => {
 })
 
 // Get Report By User ID
+router.get('/getPopulated/byUser/:id', async (req, res) => {
+  try {
+    const report = await Report.find({ idUser: req.params.id }) // retorna array com Report
+                          .populate({
+                            path: "answers",
+                            populate: { path: "idQuestion", 
+                                        select: [ "skill_model_a", "skill_model_b", "skill_model_c" ]
+                            }
+                          })
+    res.json(report)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get Report By User ID
 router.get('/ByUser/:id', async (req, res) => {
   try {
     const report = await Report.find({ idUser: req.params.id }) // retorna array com Report
+    res.json(report)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get one Report
+router.get('/:id', async (req, res) => {
+  try {
+    const report = await Report.find({ _id: req.params.id }) // retorna array com Report
     res.json(report)
   } catch (err) {
     res.status(500).json({ message: err.message })
