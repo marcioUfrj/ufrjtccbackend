@@ -12,19 +12,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-// Get Report By Can Do ID
-router.get('/ByCanDo/:id', async (req, res) => {
-  try {
-    const report = await Report.find(
-                          { idCanDo: req.params.id }
-                          //{ _id: 1, idCanDo: 0, idUser: 0 } //, 'answers.idAnswerSelected': 1, 'answers.idQuestion': 1 } //, 'answers.idExercise': 0, 'answers.initialTime': 0, 'answers.finalTime': 0}
-                        ) // retorna array com Report
-    res.json(report)
-  } catch (err) {
-    res.status(500).json({ message: err.message })
-  }
-})
-
 // Get Report By User ID
 router.get('/getPopulated/byUser/:id', async (req, res) => {
   try {
@@ -35,6 +22,35 @@ router.get('/getPopulated/byUser/:id', async (req, res) => {
                                         select: [ "skill_model_a", "skill_model_b", "skill_model_c" ]
                             }
                           })
+    res.json(report)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get Report By User ID
+router.get('/getPopulated/:id', async (req, res) => {
+  try {
+    const report = await Report.find({ _id: req.params.id }) // retorna array com Report
+                          .populate({
+                            path: "answers",
+                            populate: { path: "idQuestion", 
+                                        select: [ "skill_model_a", "skill_model_b", "skill_model_c" ]
+                            }
+                          })
+    res.json(report)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get Report By Can Do ID
+router.get('/ByCanDo/:id', async (req, res) => {
+  try {
+    const report = await Report.find(
+                          { idCanDo: req.params.id }
+                          //{ _id: 1, idCanDo: 0, idUser: 0 } //, 'answers.idAnswerSelected': 1, 'answers.idQuestion': 1 } //, 'answers.idExercise': 0, 'answers.initialTime': 0, 'answers.finalTime': 0}
+                        ) // retorna array com Report
     res.json(report)
   } catch (err) {
     res.status(500).json({ message: err.message })
