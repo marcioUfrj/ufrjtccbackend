@@ -83,7 +83,8 @@ router.get('/getPopulated/ByCanDo/:idCanDo', async (req, res) => {
 
     const adj_exercises = exercises.map(e => {
       e.questions = e.questions.map(q => {
-        return { 
+        return {
+          idQuestion: q.idQuestion._id,
           question: q.idQuestion.question,
           skill_model_a: q.idQuestion.skill_model_a,
           skill_model_b: q.idQuestion.skill_model_b,
