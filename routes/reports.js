@@ -1,7 +1,19 @@
+const { response } = require('express')
 const express = require('express')
 const router = express.Router()
 const Report = require('../models/report')
+const { path_model_maps } = require('../public/constants')
 
+// await fs.writeFile(path_model_maps[cd_model], JSON.stringify(Object.fromEntries(mapping)))
+
+const mapping = new Map(
+  [
+    ['id_user_1', 1],
+    ['id_user_2', 2],
+    ['id_item_1', 3],
+    ['id_item_2', 4]
+  ]
+)
 
 router.get('/', async (req, res) => {
   try {
@@ -19,7 +31,7 @@ router.get('/getPopulated/byUser/:id', async (req, res) => {
                           .populate({
                             path: "answers",
                             populate: { path: "idQuestion", 
-                                        select: [ "skill_model_a", "skill_model_b", "skill_model_c" ]
+                                        select: [ "skill_model_unificado", "skill_model_semi_unificado", "skill_model_granular" ]
                             }
                           })
     res.json(report)
@@ -28,14 +40,14 @@ router.get('/getPopulated/byUser/:id', async (req, res) => {
   }
 })
 
-// Get Report By User ID
+// Get Report By Report ID
 router.get('/getPopulated/:id', async (req, res) => {
   try {
     const report = await Report.find({ _id: req.params.id }) // retorna array com Report
                           .populate({
                             path: "answers",
                             populate: { path: "idQuestion", 
-                                        select: [ "skill_model_a", "skill_model_b", "skill_model_c" ]
+                                        select: [ "skill_model_unificado", "skill_model_semi_unificado", "skill_model_granular" ]
                             }
                           })
     res.json(report)
@@ -67,7 +79,46 @@ router.get('/ByUser/:id', async (req, res) => {
   }
 })
 
-// Get one Report
+// Generate data CSV
+router.get('/generateModelDataCSV', async (req, res) => {
+  try {
+    const reports = await Report.find()
+                            .populate({
+                              path: "answers",
+                              populate: { path: "idQuestion", 
+                                          select: [ "skill_model_unificado", "skill_model_semi_unificado", "skill_model_granular" ]
+                              }
+                            })
+
+    export_data = reports.reduce((accRow, report) => {
+      //rows returns an array that would be inside an "map" array => reduce to flatten an array of arrays
+      rows = report.answers.reduce((accData, answer) => {
+          accData[`${answer.idQuestion[req.body.code_model]}_wins`] ??= 0
+          accData[`${answer.idQuestion[req.body.code_model]}_fails`] ??= 0
+          accData.rows.push({
+            users : report.idUser,
+            items : answer.idQuestion._id,
+            skills : answer.idQuestion[req.body.code_model],
+            correct : answer.score,
+            wins : accData[`${answer.idQuestion[req.body.code_model]}_wins`],
+            fails : accData[`${answer.idQuestion[req.body.code_model]}_fails`]
+          })
+          accData[`${answer.idQuestion[req.body.code_model]}_wins`] += answer.score
+          accData[`${answer.idQuestion[req.body.code_model]}_fails`] += 1 - answer.score
+          return accData
+      },
+      { rows : [] })
+      return accRow.concat(rows.rows)
+    },
+    [])
+
+    res.json(export_data)
+  } catch (err) {
+    response.status(500).json({ message: err.message })
+  }
+})
+
+// Get one Report By Report ID
 router.get('/:id', async (req, res) => {
   try {
     const report = await Report.find({ _id: req.params.id }) // retorna array com Report

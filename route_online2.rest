@@ -55,9 +55,9 @@ GET https://tccmarcioconceito.herokuapp.com/exercises/createQuestionsDB/ByCanDo/
 
 GET https://tccmarcioconceito.herokuapp.com/exercises/
 ###
-GET https://tccmarcioconceito.herokuapp.com/exercises/getPopulated/ByCanDo/62b9d72d8c02c34b14723195
+GET https://tccmarcioconceito.herokuapp.com/exercises/getPopulated/ByCanDo/62b9d7638c02c34b14723199
 ###
-GET https://tccmarcioconceito.herokuapp.com/exercises/ByCanDo/62b9d72d8c02c34b14723195
+GET https://tccmarcioconceito.herokuapp.com/exercises/ByCanDo/62b9d7638c02c34b14723199
 ###
 
 POST https://tccmarcioconceito.herokuapp.com/exercises/

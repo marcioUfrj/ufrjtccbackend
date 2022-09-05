@@ -47,9 +47,9 @@ router.get('/createQuestionsDB/ByCanDo/:idCanDo', async (req, res) => {
           
           const new_q = new Question({
             question: q.question,
-            skill_model_a: q.skill_model_a,
-            skill_model_b: q.skill_model_b,
-            skill_model_c: q.skill_model_c,
+            skill_model_unificado: q.skill_model_unificado,
+            skill_model_semi_unificado: q.skill_model_semi_unificado,
+            skill_model_granular: q.skill_model_granular,
             answers: new_answers
           })
           const saved_q = await new_q.save()
@@ -86,9 +86,9 @@ router.get('/getPopulated/ByCanDo/:idCanDo', async (req, res) => {
         return {
           idQuestion: q.idQuestion._id,
           question: q.idQuestion.question,
-          skill_model_a: q.idQuestion.skill_model_a,
-          skill_model_b: q.idQuestion.skill_model_b,
-          skill_model_c: q.idQuestion.skill_model_c,
+          skill_model_unificado: q.idQuestion.skill_model_unificado,
+          skill_model_semi_unificado: q.idQuestion.skill_model_semi_unificado,
+          skill_model_granular: q.idQuestion.skill_model_granular,
           answers: q.idQuestion.answers 
         }
       })

@@ -31,13 +31,13 @@ DELETE http://localhost:4000/candos/624e10f9cc50bdb65ac2b648
 
 
 ###
-GET http://localhost:4000/questions/getPopulated/62fbacbfd1989ee7da430393
+GET http://localhost:4000/questions/getPopulated/62fc3e4e8123a75f0d67c477
 ###
 
 ###
 GET http://localhost:4000/answers/
 ###
-GET http://localhost:4000/questions/62fc3e4e8123a75f0d67c477
+GET http://localhost:4000/questions/
 ###
 DELETE http://localhost:4000/answers/all
 ###
@@ -62,942 +62,496 @@ GET http://localhost:4000/exercises/createQuestionsDB/ByCanDo/62fadd57340a4fa60d
 
 POST http://localhost:4000/exercises/
 Content-Type: application/json
+
 {
   "index_val": 1,
-    "name": "Leitura de Hiragana #2",
-    "description": "Escolha a alternativa correta com a leitura em ROMAJI e significado em PORTUGUÊS.",
+    "name": "Leitura de Katakana #1",
+    "description": "Escolha a alternativa correta com a leitura em ROOMAJI (Caractér romano) e significado em Português.",
     "questions": [
       {
-        "question": "あさ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "ロシア",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "ASA - Manhã",
+            "text": "DOITSU - Alemanhã",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1019"
+          },
+          {
+            "text": "ROSHIA - Rússia",
             "correct": true,
-            "_id": "62ced00c18fbfdd252508663"
+            "_id": "62d5d4b4971f290a664b101a"
           },
           {
-            "text": "SAN - Três",
+            "text": "KANADA - Canadá",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508664"
-          },
-          {
-            "text": "HIRU - Tarde",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508665"
-          },
-          {
-            "text": "YORU - Noite",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508666"
+            "_id": "62d5d4b4971f290a664b101b"
           }
         ],
-        "_id": "62ced00c18fbfdd252508662"
+        "_id": "62d5d4b4971f290a664b1018"
       },
       {
-        "question": "いち",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "アメリカ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "YORU - Noite",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508668"
-          },
-          {
-            "text": "IE - Casa",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508669"
-          },
-          {
-            "text": "ICHI - Um",
+            "text": "AMERICA - América / Estados Unidos",
             "correct": true,
-            "_id": "62ced00c18fbfdd25250866a"
+            "_id": "62d5d4b4971f290a664b101d"
           },
           {
-            "text": "YAMA - Montanha",
+            "text": "IGIRISU - Inglaterra",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250866b"
+            "_id": "62d5d4b4971f290a664b101e"
+          },
+          {
+            "text": "ITARIA - Itália",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b101f"
           }
         ],
-        "_id": "62ced00c18fbfdd252508667"
+        "_id": "62d5d4b4971f290a664b101c"
       },
       {
-        "question": "いえ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "イギリス",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "ICHI - Um",
+            "text": "SUPEIN - Espanha",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250866d"
+            "_id": "62d5d4b4971f290a664b1021"
           },
           {
-            "text": "IE - Casa",
+            "text": "EGIPUTO - Egito",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1022"
+          },
+          {
+            "text": "IGIRISU - Inglaterra",
             "correct": true,
-            "_id": "62ced00c18fbfdd25250866e"
-          },
-          {
-            "text": "NEKO - Gato",
-            "correct": false,
-            "_id": "62ced00c18fbfdd25250866f"
-          },
-          {
-            "text": "SORA - Céu",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508670"
+            "_id": "62d5d4b4971f290a664b1023"
           }
         ],
-        "_id": "62ced00c18fbfdd25250866c"
+        "_id": "62d5d4b4971f290a664b1020"
       },
       {
-        "question": "いす",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "ブラジル",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "ISU - Cadeira",
+            "text": "FURANSU - França",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1025"
+          },
+          {
+            "text": "MEKISHIKO - México",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1026"
+          },
+          {
+            "text": "BURAJIRU - Brasil",
             "correct": true,
-            "_id": "62ced00c18fbfdd252508672"
-          },
-          {
-            "text": "HON - Livro",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508673"
-          },
-          {
-            "text": "INU - Cachorro",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508674"
-          },
-          {
-            "text": "IE - Casa",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508675"
+            "_id": "62d5d4b4971f290a664b1027"
           }
         ],
-        "_id": "62ced00c18fbfdd252508671"
+        "_id": "62d5d4b4971f290a664b1024"
       },
       {
-        "question": "ざっし",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "ドイツ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "ZATSUSHI - Caderno",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508677"
-          },
-          {
-            "text": "SASSHI - Revista",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508678"
-          },
-          {
-            "text": "ZASSHI - Revista",
+            "text": "DOITSU - Alemanhã",
             "correct": true,
-            "_id": "62ced00c18fbfdd252508679"
+            "_id": "62d5d4b4971f290a664b1029"
           },
           {
-            "text": "ZACCHI - Caderno",
+            "text": "INDO - Índia",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250867a"
+            "_id": "62d5d4b4971f290a664b102a"
+          },
+          {
+            "text": "KANADA - Canadá",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b102b"
           }
         ],
-        "_id": "62ced00c18fbfdd252508676"
+        "_id": "62d5d4b4971f290a664b1028"
       },
       {
-        "question": "そら",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "インドネシア",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "UMI - Oceano",
+            "text": "OOSUTORARIA - Austrália",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250867c"
+            "_id": "62d5d4b4971f290a664b102d"
           },
           {
-            "text": "SORA - Céu",
+            "text": "INDONESHIA - Indonésia",
             "correct": true,
-            "_id": "62ced00c18fbfdd25250867d"
+            "_id": "62d5d4b4971f290a664b102e"
           },
           {
-            "text": "NEKO - Gato",
+            "text": "MAREESHIA - Malásia",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250867e"
-          },
-          {
-            "text": "HIRU - Noite",
-            "correct": false,
-            "_id": "62ced00c18fbfdd25250867f"
+            "_id": "62d5d4b4971f290a664b102f"
           }
         ],
-        "_id": "62ced00c18fbfdd25250867b"
+        "_id": "62d5d4b4971f290a664b102c"
       },
       {
-        "question": "おちゃ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "フィリピン",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "UMI - Oceano",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508681"
-          },
-          {
-            "text": "OCHA - Chá",
+            "text": "FIRIPIN - Filipinas",
             "correct": true,
-            "_id": "62ced00c18fbfdd252508682"
+            "_id": "62d5d4b4971f290a664b1031"
           },
           {
-            "text": "ZASSHI - Revista",
+            "text": "BETONAMU - Vietnã",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508683"
+            "_id": "62d5d4b4971f290a664b1032"
           },
           {
-            "text": "HON - Livro",
+            "text": "EJUPUTO - Egito",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508684"
+            "_id": "62d5d4b4971f290a664b1033"
           }
         ],
-        "_id": "62ced00c18fbfdd252508680"
+        "_id": "62d5d4b4971f290a664b1030"
       },
       {
-        "question": "に",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "イタリア",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "NI - Dois",
+            "text": "ITARIA - Itália",
             "correct": true,
-            "_id": "62ced00c18fbfdd252508686"
+            "_id": "62d5d4b4971f290a664b1035"
           },
           {
-            "text": "SAN - Três",
+            "text": "AMERIKA - América / Estados Unidos",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508687"
+            "_id": "62d5d4b4971f290a664b1036"
           },
           {
-            "text": "CHA - Chá",
+            "text": "BURAJIRU - Brasil",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508688"
-          },
-          {
-            "text": "IE - Casa",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508689"
+            "_id": "62d5d4b4971f290a664b1037"
           }
         ],
-        "_id": "62ced00c18fbfdd252508685"
+        "_id": "62d5d4b4971f290a664b1034"
       },
       {
-        "question": "れい",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "エジプト",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "UMI - Oceano",
+            "text": "MEKISHIKO - México",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250868b"
+            "_id": "62d5d4b4971f290a664b1039"
           },
           {
-            "text": "NEKO - Gato",
+            "text": "IGIRISU - Inglaterra",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250868c"
+            "_id": "62d5d4b4971f290a664b103a"
           },
           {
-            "text": "SAN - Três",
-            "correct": false,
-            "_id": "62ced00c18fbfdd25250868d"
-          },
-          {
-            "text": "REI - Exemplo",
+            "text": "EJIPUTO - Egito",
             "correct": true,
-            "_id": "62ced00c18fbfdd25250868e"
+            "_id": "62d5d4b4971f290a664b103b"
           }
         ],
-        "_id": "62ced00c18fbfdd25250868a"
+        "_id": "62d5d4b4971f290a664b1038"
       },
       {
-        "question": "かぞく",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "カナダ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "KANJI - Kanji",
+            "text": "ROSHIA - Rússia",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508690"
+            "_id": "62d5d4b4971f290a664b103d"
+          },
+          {
+            "text": "KANADA - Canadá",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b103e"
+          },
+          {
+            "text": "INDO - Indonésia",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b103f"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b103c"
+      },
+      {
+        "question": "エアコン",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "EAKON - Ar-condicionado",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b1041"
+          },
+          {
+            "text": "TEEBURU - Mesa",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1042"
+          },
+          {
+            "text": "HOTERU - Hotel",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1043"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b1040"
+      },
+      {
+        "question": "ソファ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "SHAWA - Chuveiro",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1045"
+          },
+          {
+            "text": "SOFA - Sofá",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b1046"
+          },
+          {
+            "text": "TOIRE - Vaso Sanitário",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1047"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b1044"
+      },
+      {
+        "question": "カタカナ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "TAKUSHII - Táxi",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1049"
+          },
+          {
+            "text": "KATAKANA - Katakana",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b104a"
+          },
+          {
+            "text": "RESUTORAN - Restaurante",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b104b"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b1048"
+      },
+      {
+        "question": "コーヒー",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "TAKUSHII - Táxi",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b104d"
+          },
+          {
+            "text": "PAATHII - Festa",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b104e"
+          },
+          {
+            "text": "KOOHII - Café",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b104f"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b104c"
+      },
+      {
+        "question": "ピアノ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "PIANO - Piano",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b1051"
+          },
+          {
+            "text": "KAMERA - Câmera fotográfica",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1052"
+          },
+          {
+            "text": "TEREBI - Tevelisão",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1053"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b1050"
+      },
+      {
+        "question": "ベッド",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "SHATSU - Saia",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1055"
+          },
+          {
+            "text": "PAN - Pão",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1056"
+          },
+          {
+            "text": "BEDDO - Cama",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b1057"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b1054"
+      },
+      {
+        "question": "パーティー",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "TAKUSHII - Táxi",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1059"
+          },
+          {
+            "text": "PAATHII - Festa",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b105a"
+          },
+          {
+            "text": "KOOHII - Café",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b105b"
+          }
+        ],
+        "_id": "62d5d4b4971f290a664b1058"
+      },
+      {
+        "question": "カラオケ",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
+        "answers": [
+          {
+            "text": "KARAOKE - Karaokê",
+            "correct": true,
+            "_id": "62d5d4b4971f290a664b105d"
           },
           {
             "text": "KATAKANA - Katakana",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508691"
+            "_id": "62d5d4b4971f290a664b105e"
           },
           {
-            "text": "KAZOKU - Família",
-            "correct": true,
-            "_id": "62ced00c18fbfdd252508692"
-          },
-          {
-            "text": "TOKEI - Relógio",
+            "text": "RESUTORAN - Restaurante",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508693"
+            "_id": "62d5d4b4971f290a664b105f"
           }
         ],
-        "_id": "62ced00c18fbfdd25250868f"
+        "_id": "62d5d4b4971f290a664b105c"
       },
       {
-        "question": "ねこ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "ジュース",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "NEKO - Gato",
+            "text": "SHATSU - Saia",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1061"
+          },
+          {
+            "text": "JUUSU - Suco",
             "correct": true,
-            "_id": "62ced00c18fbfdd252508695"
+            "_id": "62d5d4b4971f290a664b1062"
           },
           {
-            "text": "KANJI - Kanji",
+            "text": "SHAWAA - Chuveiro",
             "correct": false,
-            "_id": "62ced00c18fbfdd252508696"
-          },
-          {
-            "text": "SAN - Três",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508697"
-          },
-          {
-            "text": "REI - Exemplo",
-            "correct": false,
-            "_id": "62ced00c18fbfdd252508698"
+            "_id": "62d5d4b4971f290a664b1063"
           }
         ],
-        "_id": "62ced00c18fbfdd252508694"
+        "_id": "62d5d4b4971f290a664b1060"
       },
       {
-        "question": "ひらがな",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
+        "question": "ホテル",
+        "skill_model_unificado": 1,
+        "skill_model_semi_unificado": 2,
+        "skill_model_granular": 2,
         "answers": [
           {
-            "text": "KATAKANA - Katakana",
+            "text": "TOIRE - Vaso Sanitário",
             "correct": false,
-            "_id": "62ced00c18fbfdd25250869a"
+            "_id": "62d5d4b4971f290a664b1065"
           },
           {
-            "text": "HIRAGANA - Hiragana",
+            "text": "TEBURU - Mesa",
+            "correct": false,
+            "_id": "62d5d4b4971f290a664b1066"
+          },
+          {
+            "text": "HOTERU - Hotel",
             "correct": true,
-            "_id": "62ced00c18fbfdd25250869b"
-          },
-          {
-            "text": "FUJISAN - Monte Fuji",
-            "correct": false,
-            "_id": "62ced00c18fbfdd25250869c"
-          },
-          {
-            "text": "TENPURA - Tempura",
-            "correct": false,
-            "_id": "62ced00c18fbfdd25250869d"
+            "_id": "62d5d4b4971f290a664b1067"
           }
         ],
-        "_id": "62ced00c18fbfdd252508699"
-      },
-      {
-        "question": "しんぶん",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TENPURA - Tempura",
-            "correct": false,
-            "_id": "62ced00c18fbfdd25250869f"
-          },
-          {
-            "text": "HIRAGANA - Hiragana",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086a0"
-          },
-          {
-            "text": "SHINBUN - Jornal",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086a1"
-          },
-          {
-            "text": "KATAKANA - Katakana",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086a2"
-          }
-        ],
-        "_id": "62ced00c18fbfdd25250869e"
-      },
-      {
-        "question": "かんじ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "SUUJI - Número",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086a4"
-          },
-          {
-            "text": "KANJI - Kanji",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086a5"
-          },
-          {
-            "text": "TSUKUE - Mesa",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086a6"
-          },
-          {
-            "text": "YASAI - Vegetal",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086a7"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086a3"
-      },
-      {
-        "question": "にほんご",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TAMAGO - Ovo",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086a9"
-          },
-          {
-            "text": "TENPURA - Tempura",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086aa"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086ab"
-          },
-          {
-            "text": "NIHONGO - Idioma japonês",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086ac"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086a8"
-      },
-      {
-        "question": "ほん",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "SORA - Mar",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086ae"
-          },
-          {
-            "text": "HAI - Sim",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086af"
-          },
-          {
-            "text": "UMI - Mar",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086b0"
-          },
-          {
-            "text": "HON - Livro",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086b1"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086ad"
-      },
-      {
-        "question": "うみ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "HON - Livro",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086b3"
-          },
-          {
-            "text": "UMI - Mar",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086b4"
-          },
-          {
-            "text": "HAI - Sim",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086b5"
-          },
-          {
-            "text": "ICHI - Um",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086b6"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086b2"
-      },
-      {
-        "question": "つくえ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TSUKUE - Mesa",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086b8"
-          },
-          {
-            "text": "TAMAGO - Ovo",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086b9"
-          },
-          {
-            "text": "IIE - Não",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086ba"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086bb"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086b7"
-      },
-      {
-        "question": "やま",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "HIRU - Tarde",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086bd"
-          },
-          {
-            "text": "YORU - Noite",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086be"
-          },
-          {
-            "text": "YAMA - Montanha",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086bf"
-          },
-          {
-            "text": "NEKO - Gato",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c0"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086bc"
-      },
-      {
-        "question": "ふじさん",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "SAKANA - Peixe",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c2"
-          },
-          {
-            "text": "FUJISAN - Monte Fuji",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086c3"
-          },
-          {
-            "text": "TOUKYOU - Tókio",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c4"
-          },
-          {
-            "text": "NIHONGO - Idioma Japonês",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c5"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086c1"
-      },
-      {
-        "question": "いいえ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "HAI - Sim",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c7"
-          },
-          {
-            "text": "REI - Exemplo",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c8"
-          },
-          {
-            "text": "ICHI - Um",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086c9"
-          },
-          {
-            "text": "IIE - Não",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086ca"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086c6"
-      },
-      {
-        "question": "よる",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "HIRU - Tarde",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086cc"
-          },
-          {
-            "text": "YORU - Noite",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086cd"
-          },
-          {
-            "text": "YAMA - Montanha",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086ce"
-          },
-          {
-            "text": "NEKO - Gato",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086cf"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086cb"
-      },
-      {
-        "question": "すうじ",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "KANJI - Kanji",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086d1"
-          },
-          {
-            "text": "SUUJI - Número",
-            "correct": true,
-            "_id": "62ced00c18fbfdd2525086d2"
-          },
-          {
-            "text": "UMI - Mar",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086d3"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00c18fbfdd2525086d4"
-          }
-        ],
-        "_id": "62ced00c18fbfdd2525086d0"
-      },
-      {
-        "question": "たまご",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TAMAGO - Ovo",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086d6"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086d7"
-          },
-          {
-            "text": "YASAI - Vegetal",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086d8"
-          },
-          {
-            "text": "KANJI - Kanji",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086d9"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086d5"
-      },
-      {
-        "question": "さかな",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TSUKUE - Mesa",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086db"
-          },
-          {
-            "text": "TAMAGO - Ovo",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086dc"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086dd"
-          },
-          {
-            "text": "SAKANA - Peixe",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086de"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086da"
-      },
-      {
-        "question": "とけい",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TSUKUE - Mesa",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086e0"
-          },
-          {
-            "text": "TAMAGO - Ovo",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086e1"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086e2"
-          },
-          {
-            "text": "SAKANA - Peixe",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086e3"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086df"
-      },
-      {
-        "question": "はい",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "HAI - Sim",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086e5"
-          },
-          {
-            "text": "HON - Livro",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086e6"
-          },
-          {
-            "text": "YORU - Noite",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086e7"
-          },
-          {
-            "text": "IE - Casa",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086e8"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086e4"
-      },
-      {
-        "question": "ひる",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "YORU - Noite",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086ea"
-          },
-          {
-            "text": "HIRU - Tarde",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086eb"
-          },
-          {
-            "text": "SORA - Céu",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086ec"
-          },
-          {
-            "text": "ICHI - Um",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086ed"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086e9"
-      },
-      {
-        "question": "てんぷら",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TOUKYOU - Tókio",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086ef"
-          },
-          {
-            "text": "OCHA - Chá",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086f0"
-          },
-          {
-            "text": "FUJISAN - Monte Fuji",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086f1"
-          },
-          {
-            "text": "TENPURA - Tempura",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086f2"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086ee"
-      },
-      {
-        "question": "とうきょう",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "TENPURA - Tempura",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086f4"
-          },
-          {
-            "text": "TAMAGO - Ovo",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086f5"
-          },
-          {
-            "text": "TOUKYOU - Tókio",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086f6"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086f7"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086f3"
-      },
-      {
-        "question": "さん",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "SAN - Três",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086f9"
-          },
-          {
-            "text": "HON - Livro",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086fa"
-          },
-          {
-            "text": "HAI - Sim",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086fb"
-          },
-          {
-            "text": "SORA - Céu",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086fc"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086f8"
-      },
-      {
-        "question": "やさい",
-        "skill_model_a": 1,
-        "skill_model_b": 1,
-        "skill_model_c": 1,
-        "answers": [
-          {
-            "text": "YORU - Noite",
-            "correct": false,
-            "_id": "62ced00d18fbfdd2525086fe"
-          },
-          {
-            "text": "YASAI - Vegetal",
-            "correct": true,
-            "_id": "62ced00d18fbfdd2525086ff"
-          },
-          {
-            "text": "TOKEI - Relógio",
-            "correct": false,
-            "_id": "62ced00d18fbfdd252508700"
-          },
-          {
-            "text": "YAMA - Montanha",
-            "correct": false,
-            "_id": "62ced00d18fbfdd252508701"
-          }
-        ],
-        "_id": "62ced00d18fbfdd2525086fd"
+        "_id": "62d5d4b4971f290a664b1064"
       }
     ],
-    "cando_id": "62fadd49340a4fa60d0c4f50"
+    "cando_id": "62fadd57340a4fa60d0c4f52"
 }
+
 ###
 
 PUT http://localhost:4000/exercises/62fba86035e8d585042a7802
@@ -1008,7 +562,8 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:4000/exercises/624ee0b2ce17e94b1c17d5ab
+###
+DELETE http://localhost:4000/exercises/62fc3e2d8123a75f0d67c2d2
 ###
 
 
@@ -1017,22 +572,90 @@ Content-Type: application/json
 
 {
   "idUser": "62b4edfcb22b0cf44db5e5ff",
-  "idCanDo": "62b9d72d8c02c34b14723195",
+  "idCanDo": "62fadd49340a4fa60d0c4f50",
   "answers": [
     {
-      "idAnswerSelected": "62fc3e4e8123a75f0d67c377",
-      "idQuestion": "62fc3e4e8123a75f0d67c477",
-      "idExercise": "62fc3e2d8123a75f0d67c2d2",
+      "idAnswerSelected": "6307da6219a0091135472055",
+      "idQuestion": "6307da6219a0091135472155",
+      "idExercise": "6307da0519a0091135471f5e",
       "score": 1,
       "initialTime": "2022-08-17T15:48:47.561660762",
       "finalTime": "2022-08-17T15:48:48.462660762",
       "_id": "62fd38376f2a2de7a412b760"
+    },
+    {
+      "idAnswerSelected": "6307da6219a0091135472055",
+      "idQuestion": "6307da6219a0091135472155",
+      "idExercise": "6307da0519a0091135471f5e",
+      "score": 1,
+      "initialTime": "2022-08-17T15:48:47.561660762",
+      "finalTime": "2022-08-17T15:48:48.462660762",
+      "_id": "62fd38376f2a2de7a412b760"
+    },
+    
+    {
+      "idAnswerSelected": "6307da6219a0091135472055",
+      "idQuestion": "6307da6219a0091135472155",
+      "idExercise": "6307da0519a0091135471f5e",
+      "score": 0,
+      "initialTime": "2022-08-17T15:48:47.561660762",
+      "finalTime": "2022-08-17T15:48:48.462660762",
+      "_id": "62fd38376f2a2de7a412b760"
+    },
+    {
+      "idAnswerSelected": "6307da6219a0091135472055",
+      "idQuestion": "6307da6219a0091135472155",
+      "idExercise": "6307da0519a0091135471f5e",
+      "score": 1,
+      "initialTime": "2022-08-17T15:48:47.561660762",
+      "finalTime": "2022-08-17T15:48:48.462660762",
+      "_id": "62fd38376f2a2de7a412b760"
+    },
+    {
+      "idAnswerSelected": "6307da6e19a0091135472238",
+      "idQuestion": "6307da6e19a00911354722b0",
+      "idExercise": "6307da3619a0091135472000",
+      "score": 1,
+      "initialTime": "2022-08-17T15:48:47.561660762",
+      "finalTime": "2022-08-17T15:48:48.462660762",
+      "_id": "62fd38376f2a2de7a412b761"
+    },
+    {
+      "idAnswerSelected": "6307da6e19a0091135472238",
+      "idQuestion": "6307da6e19a00911354722b0",
+      "idExercise": "6307da3619a0091135472000",
+      "score": 1,
+      "initialTime": "2022-08-17T15:48:47.561660762",
+      "finalTime": "2022-08-17T15:48:48.462660762",
+      "_id": "62fd38376f2a2de7a412b761"
     }
   ]
 }
 ###
-GET http://localhost:4000/reports/62fd3e947fe264010bbf6f0a
+GET http://localhost:4000/reports/
 ###
-GET http://localhost:4000/reports/getPopulated/62fd3e947fe264010bbf6f0a
+GET http://localhost:4000/reports/getPopulated/6307db4319a0091135472475
 ###
-DELETE http://localhost:4000/reports/625c8a9b15c76579ae381025
+DELETE http://localhost:4000/reports/6313fe489f8d55cc33ff3383
+
+###
+GET http://localhost:4000/reports/generateModelDataCSV
+Content-Type: application/json
+
+{
+  "code_model": "skill_model_unificado"
+}
+
+
+
+###
+GET http://localhost:4000/models/
+###
+POST http://localhost:4000/models/fromFile
+Content-Type: application/json
+
+{
+  "model": "semi_unificado"
+}
+###
+DELETE http://localhost:4000/models/all

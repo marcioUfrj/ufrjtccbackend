@@ -24,15 +24,15 @@ const exerciseSchema = new mongoose.Schema({
         type: String,
         required: false
       },
-      skill_model_a:  { 
+      skill_model_unificado:  { 
         type: Number,
         required: false
       },
-      skill_model_b:  { 
+      skill_model_semi_unificado:  { 
         type: Number,
         required: false
       },
-      skill_model_c:  { 
+      skill_model_granular:  { 
         type: Number,
         required: false
       },

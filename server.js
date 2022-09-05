@@ -15,6 +15,7 @@ const questionRouter = require('./routes/question')
 const answerRouter = require('./routes/answer')
 const reportRouter = require('./routes/reports')
 const userRouter = require('./routes/users')
+const modelRouter = require('./routes/models')
 
 //CONFIGURACOES
 app.use(methodOverride('_method'))
@@ -46,6 +47,7 @@ app.use('/questions', questionRouter)
 app.use('/answers', answerRouter)
 app.use('/reports', reportRouter)
 app.use('/users', userRouter)
+app.use('/models', modelRouter)
 
 app.listen(process.env.PORT || 4000)
 
