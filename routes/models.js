@@ -26,6 +26,16 @@ router.get('/', async (req, res) => {
 })
 
 // Get one model by ID
+router.get('/active', async (req, res) => {
+  try {
+    const in_model = await Model.find({ _id: ['6316a828e00b754e3cd1751f', '6316a855e00b754e3cd1752e', '6316a86ce00b754e3cd1753c' ] } )
+    res.json(in_model)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
+// Get one model by ID
 router.get('/:id', async (req, res) => {
   try {
     const in_model = await Model.findById(req.params.id)

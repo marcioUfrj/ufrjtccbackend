@@ -96,9 +96,9 @@ router.get('/generateModelDataCSV', async (req, res) => {
           accData[`${answer.idQuestion[req.body.code_model]}_wins`] ??= 0
           accData[`${answer.idQuestion[req.body.code_model]}_fails`] ??= 0
           accData.rows.push({
-            users : report.idUser,
-            items : answer.idQuestion._id,
-            skills : answer.idQuestion[req.body.code_model],
+            user : report.idUser,
+            item : answer.idQuestion._id,
+            skill : answer.idQuestion[req.body.code_model],
             correct : answer.score,
             wins : accData[`${answer.idQuestion[req.body.code_model]}_wins`],
             fails : accData[`${answer.idQuestion[req.body.code_model]}_fails`]
