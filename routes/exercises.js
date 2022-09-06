@@ -78,7 +78,7 @@ router.get('/getPopulated/ByCanDo/:idCanDo', async (req, res) => {
     let exercises = await Exercise.find({ cando_id: req.params.idCanDo }) // retorna array com exercise
                               .populate({ 
                                 path: "questions", 
-                                populate: { path: "idQuestion", select: ["question", "skill_model_a", "skill_model_b", "skill_model_c", "answers"] }
+                                populate: { path: "idQuestion", select: ["question", "skill_model_unificado", "skill_model_semi_unificado", "skill_model_granular", "answers"] }
                               })
 
     const adj_exercises = exercises.map(e => {

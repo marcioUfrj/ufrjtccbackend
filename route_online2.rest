@@ -577,6 +577,8 @@ Content-Type: application/json
 
 GET https://tccmarcioconceito.herokuapp.com/models/
 ###
+GET https://tccmarcioconceito.herokuapp.com/models/active
+###
 POST https://tccmarcioconceito.herokuapp.com/models/fromFile
 Content-Type: application/json
 
