@@ -78,6 +78,7 @@ router.post('/', async (req, res) => {
     nickname: req.body.nickname,
     nivelCEFR: req.body.nivelCEFR,
     nivelJLPT: req.body.nivelJLPT,
+    nivelJLPTProgresso: req.body.nivelJLPTProgresso,
     nivelShirai: req.body.nivelShirai,
     role: req.body.role,
     loginId: req.body.loginId
@@ -99,6 +100,7 @@ router.put('/:id', async (req, res) => {
     inUser.nickname = req.body.nickname
     inUser.nivelCEFR = req.body.nivelCEFR
     inUser.nivelJLPT = req.body.nivelJLPT
+    inUser.nivelJLPTProgresso = req.body.nivelJLPTProgresso
     inUser.nivelShirai = req.body.nivelShirai
     inUser.role = inUser.role
     inUser.loginId = inUser.loginId
@@ -120,6 +122,7 @@ router.put('/ByLoginId/:idLogin', async (req, res) => {
     inUser[0].nickname = req.body.nickname
     inUser[0].nivelCEFR = req.body.nivelCEFR
     inUser[0].nivelJLPT = req.body.nivelJLPT
+    inUser[0]['nivelJLPTProgresso'] = req.body.nivelJLPTProgresso
     inUser[0].nivelShirai = req.body.nivelShirai
     inUser[0].role = inUser[0].role
     inUser[0].loginId = inUser[0].loginId

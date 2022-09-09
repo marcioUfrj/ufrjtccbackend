@@ -21,7 +21,7 @@ const modelSchema = new mongoose.Schema({
   encoding: [String],
   mapCoefs: {
     type: Map,
-    of: String
+    of: Number
   }
 })
 

@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  nivelJLPTProgresso: {
+    type: String,
+    required: true
+  },
   nivelShirai: {
     type: String,
     required: true
