@@ -4,6 +4,9 @@ const Exercise = require('../models/exercise')
 const Question = require('../models/question')
 const Answer = require('../models/answer')
 
+const { shuffleArray } = require('../public/util')
+const { number_questions_evaluate } = require('../public/constants')
+
 
 router.get('/', async (req, res) => {
   try {
@@ -109,6 +112,12 @@ router.get('/getPopulated/ByCanDo/:idCanDo', async (req, res) => {
         return e
       })
     )
+
+    pop_exercises.forEach(exercise => {
+      exercise.questions = shuffleArray(exercise.questions)
+      exercise.questions = exercise.questions.slice(0, number_questions_evaluate)
+      return exercise
+    })
 
     res.json(pop_exercises)
   } catch (err) {

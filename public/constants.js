@@ -10,6 +10,9 @@ const path_model_params = {
   granular: 'C://Users/marci/Documents/Pessoais/UFRJ/TCC/plataforma_web/tcc_marcio_projeto/ktm/data/tcc_granular/model_granular_params.json'
 }
 
+const number_questions_evaluate = 15
+
 module.exports = { path_model_maps, 
-                  path_model_params 
+                  path_model_params,
+                  number_questions_evaluate
                 }
