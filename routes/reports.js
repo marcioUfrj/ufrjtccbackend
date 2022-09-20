@@ -132,6 +132,8 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   const inReport = new Report({
     idUser:  req.body.idUser,
+    nivelJLPT:  req.body.nivelJLPT,
+    nivelJLPTProgresso:  req.body.nivelJLPTProgresso,
     idCanDo: req.body.idCanDo,
     answers: req.body.answers
   })
