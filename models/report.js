@@ -55,7 +55,13 @@ const reportSchema = new mongoose.Schema(
       type: Date,
       required: true,
       default: Date.now
-    }
+    },
+    models_output: [
+      {
+        id_model: { type: String, required: true },
+        proba: { type: Number, required: true }
+      }
+    ]
   }
 )
 
