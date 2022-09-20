@@ -135,7 +135,8 @@ router.post('/', async (req, res) => {
     nivelJLPT:  req.body.nivelJLPT,
     nivelJLPTProgresso:  req.body.nivelJLPTProgresso,
     idCanDo: req.body.idCanDo,
-    answers: req.body.answers
+    answers: req.body.answers,
+    models_output: req.body.models_output
   })
   
   try {
