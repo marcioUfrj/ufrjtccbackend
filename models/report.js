@@ -7,15 +7,13 @@ const reportSchema = new mongoose.Schema(
       required: true,
       ref: 'User'
     },
-    userInfo: {
-      nivelJLPT: {
-        type: String,
-        required: true
-      },
-      nivelJLPTProgresso: {
-        type: String,
-        required: true
-      }
+    nivelJLPT: {
+      type: String,
+      required: true
+    },
+    nivelJLPTProgresso: {
+      type: String,
+      required: true
     },
     idCanDo: {
       type: mongoose.Schema.Types.ObjectId,
