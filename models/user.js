@@ -5,6 +5,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  adult: {
+    type: Boolean,
+    required: true
+  },
+  agreeTermsOfUse: {
+    type: Boolean,
+    required: true
+  },
   nivelCEFR: {
     type: String,
     required: true

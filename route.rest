@@ -56,6 +56,8 @@ GET http://localhost:4000/exercises/ByCanDo/62fadd49340a4fa60d0c4f50
 
 
 GET http://localhost:4000/exercises/getPopulated/ByCanDo/62fadd57340a4fa60d0c4f52
+
+
 ###
 GET http://localhost:4000/exercises/createQuestionsDB/ByCanDo/62fadd57340a4fa60d0c4f52
 ###

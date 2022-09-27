@@ -80,6 +80,8 @@ router.post('/', async (req, res) => {
     nivelJLPT: req.body.nivelJLPT,
     nivelJLPTProgresso: req.body.nivelJLPTProgresso,
     nivelShirai: req.body.nivelShirai,
+    adult: true,
+    agreeTermsOfUse: false,
     role: req.body.role,
     loginId: req.body.loginId
   })
@@ -102,6 +104,8 @@ router.put('/:id', async (req, res) => {
     inUser.nivelJLPT = req.body.nivelJLPT
     inUser.nivelJLPTProgresso = req.body.nivelJLPTProgresso
     inUser.nivelShirai = req.body.nivelShirai
+    inUser.adult = req.body.adult,
+    inUser.agreeTermsOfUse = req.body.agreeTermsOfUse,
     inUser.role = inUser.role
     inUser.loginId = inUser.loginId
     inUser.modelId = req.body.modelId
@@ -124,6 +128,8 @@ router.put('/ByLoginId/:idLogin', async (req, res) => {
     inUser[0].nivelJLPT = req.body.nivelJLPT
     inUser[0]['nivelJLPTProgresso'] = req.body.nivelJLPTProgresso
     inUser[0].nivelShirai = req.body.nivelShirai
+    inUser[0].adult = req.body.adult,
+    inUser[0].agreeTermsOfUse = req.body.agreeTermsOfUse,
     inUser[0].role = inUser[0].role
     inUser[0].loginId = inUser[0].loginId
     inUser[0].modelId = parseInt(req.body.modelId)
